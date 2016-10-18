@@ -15,7 +15,7 @@ import org.daisy.dotify.common.text.TextFileReader.LineData;
  *
  */
 public class CWDecompounder {
-	final static String SOFT_HYPHEN = "\u00ad";
+	static final String SOFT_HYPHEN = "\u00ad";
 	private final HashMap<String, CWHyphenationUnit> stems;
 	private final int decompoundLimit;
 
