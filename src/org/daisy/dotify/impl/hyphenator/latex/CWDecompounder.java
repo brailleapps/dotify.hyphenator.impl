@@ -29,9 +29,9 @@ public class CWDecompounder {
 
 	/**
 	 * Load dictionary
-	 * @param url
+	 * @param url the dictionary url
 	 * @param lowerLimit disregard words shorter than lowerLimit
-	 * @throws IOException
+	 * @throws IOException if the url cannot be read
 	 */
 	public void loadDictionary(String url, int lowerLimit) throws IOException {
 		if (lowerLimit<1) {
@@ -57,7 +57,7 @@ public class CWDecompounder {
 	 * Loads a dictionary.
 	 * 
 	 * @param url the url to the dictionary.
-	 * @throws IOException 
+	 * @throws IOException if the url cannot be read
 	 */
 	public void loadDictionary(String url) throws IOException {
 		loadDictionary(url, 1);
@@ -88,6 +88,9 @@ public class CWDecompounder {
 	 * @param word the input word
 	 * @param beginLimit the shortest substring at the beginning of the word to evaluate against the dictionary
 	 * @param endLimit the shortest substring at the end of the word to evaluate against the dictionary
+	 * @param threshold an ambiguity threshold in the range [0, 1]. If there are several similar solutions,
+	 * the input word is returned when the weighted difference between two candidates is less than the specified
+	 * value
 	 * @return returns the word, hyphenated at compound boundaries
 	 */
 	public String findCompounds(String word, int beginLimit, int endLimit, double threshold) {

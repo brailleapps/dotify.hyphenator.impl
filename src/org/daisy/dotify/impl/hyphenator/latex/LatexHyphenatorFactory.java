@@ -9,6 +9,7 @@ public class LatexHyphenatorFactory implements HyphenatorFactory {
 
 	/**
 	 * Constructs a new LatexHypenator to be used by a hyphenator factory.
+	 * @param core the hyphenator core
 	 */
 	public LatexHyphenatorFactory(LatexHyphenatorCore core) {
 		this.core = core;
