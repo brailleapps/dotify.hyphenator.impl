@@ -8,6 +8,7 @@ import org.daisy.dotify.api.hyphenator.HyphenatorInterface;
 import org.junit.Ignore;
 import org.junit.Test;
 
+@SuppressWarnings("javadoc")
 public class SwedishHyphenation2Test {
 	private final HyphenatorInterface hyph_sv_SE;
 	public SwedishHyphenation2Test() throws HyphenatorConfigurationException {
