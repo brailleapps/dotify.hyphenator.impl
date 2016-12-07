@@ -30,4 +30,8 @@ public class LatexHyphenatorFactoryService implements HyphenatorFactoryService {
 		return core.listLocales();
 	}
 
+	@Override
+	public void setCreatedWithSPI() {
+	}
+
 }
