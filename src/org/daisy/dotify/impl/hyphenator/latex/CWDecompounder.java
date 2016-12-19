@@ -13,7 +13,7 @@ import org.daisy.dotify.common.text.TextFileReader.LineData;
  * Class to decompound words. 
  * @author Joel Håkansson
  */
-public class CWDecompounder {
+class CWDecompounder {
 	static final String SOFT_HYPHEN = "\u00ad";
 	private final HashMap<String, CWHyphenationUnit> stems;
 	private final int decompoundLimit;
@@ -22,7 +22,7 @@ public class CWDecompounder {
 	 * Creates a new decompounder.
 	 * @param decompoundLimit the partition limit, 1 or more
 	 */
-	public CWDecompounder(int decompoundLimit) {
+	CWDecompounder(int decompoundLimit) {
 		this.decompoundLimit = decompoundLimit;
 		if (decompoundLimit<1) {
 			throw new IllegalArgumentException("Decompound limit must not be lower than one.");
@@ -36,7 +36,7 @@ public class CWDecompounder {
 	 * @param lowerLimit disregard words shorter than lowerLimit
 	 * @throws IOException if the url cannot be read
 	 */
-	public void loadDictionary(String url, int lowerLimit) throws IOException {
+	void loadDictionary(String url, int lowerLimit) throws IOException {
 		if (lowerLimit<1) {
 			throw new IllegalArgumentException("Decompound limit must not be lower than one.");
 		}
@@ -62,7 +62,7 @@ public class CWDecompounder {
 	 * @param url the url to the dictionary.
 	 * @throws IOException if the url cannot be read
 	 */
-	public void loadDictionary(String url) throws IOException {
+	void loadDictionary(String url) throws IOException {
 		loadDictionary(url, 1);
 	}
 	
@@ -70,7 +70,7 @@ public class CWDecompounder {
 	 * Gets the dictionary
 	 * @return returns the dictionary
 	 */
-	public Map<String, CWHyphenationUnit> getDictionary() {
+	Map<String, CWHyphenationUnit> getDictionary() {
 		return stems;
 	}
 
@@ -96,7 +96,7 @@ public class CWDecompounder {
 	 * value
 	 * @return returns the word, hyphenated at compound boundaries
 	 */
-	public String findCompounds(String word, int beginLimit, int endLimit, double threshold) {
+	String findCompounds(String word, int beginLimit, int endLimit, double threshold) {
 		if (word.length()<decompoundLimit) {
 			return word;
 		}

@@ -10,13 +10,13 @@ import org.daisy.dotify.api.hyphenator.HyphenatorConfigurationException;
 import org.daisy.dotify.common.text.SplitResult;
 import org.daisy.dotify.common.text.StringSplitter;
 
-public class CWHyphenatorAtom {
-	public static final String DICTIONARY_KEY = "dictionary";
-	public static final String EXCEPTIONS_FILE_KEY = "exceptions-file";
-	public static final String DECOMPOUND_LIMIT_KEY = "decompound-limit";
-	public static final String MINIMUM_WORD_LENGTH_KEY = "minimum-word-length";
-	public static final String PATTERN_PROPERTIES_KEY = "pattern-properties";
-	public static final String EVALUATE_THRESHOLD_KEY = "evaluate-threshold";
+class CWHyphenatorAtom {
+	static final String DICTIONARY_KEY = "dictionary";
+	static final String EXCEPTIONS_FILE_KEY = "exceptions-file";
+	static final String DECOMPOUND_LIMIT_KEY = "decompound-limit";
+	static final String MINIMUM_WORD_LENGTH_KEY = "minimum-word-length";
+	static final String PATTERN_PROPERTIES_KEY = "pattern-properties";
+	static final String EVALUATE_THRESHOLD_KEY = "evaluate-threshold";
 	private static final int DEFAULT_DECOMPOUND_LIMIT = 6;
 	private static final int DEFAULT_MINIMUM_WORD_LENGTH = 2;
 	private static final double DEFAULT_EVALUATE_THRESHOLD = 0.5;
@@ -34,7 +34,7 @@ public class CWHyphenatorAtom {
 	
 	
 	
-	public CWHyphenatorAtom(String subPath, String locale) throws HyphenatorConfigurationException {
+	CWHyphenatorAtom(String subPath, String locale) throws HyphenatorConfigurationException {
 		logger = Logger.getLogger(this.getClass().getCanonicalName());
 
         Properties imp;
@@ -101,15 +101,15 @@ public class CWHyphenatorAtom {
 		return ret;
 	}
 	
-	public int getDefaultBeginLimit() {
+	int getDefaultBeginLimit() {
 		return base.getDefaultBeginLimit();
 	}
 
-	public int getDefaultEndLimit() {
+	int getDefaultEndLimit() {
 		return base.getDefaultEndLimit();
 	}
 
-	public String hyphenate(String input, int beginLimit, int endLimit, int accuracy) {
+	String hyphenate(String input, int beginLimit, int endLimit, int accuracy) {
 		if (accuracy<5) {
 			return base.getHyphenator().hyphenate(input, beginLimit, endLimit);
 		} else {
