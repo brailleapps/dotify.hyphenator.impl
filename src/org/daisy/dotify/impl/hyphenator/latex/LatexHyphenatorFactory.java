@@ -4,6 +4,10 @@ import org.daisy.dotify.api.hyphenator.HyphenatorConfigurationException;
 import org.daisy.dotify.api.hyphenator.HyphenatorFactory;
 import org.daisy.dotify.api.hyphenator.HyphenatorInterface;
 
+/**
+ * Provides a hyphenator factory that uses latex hyphenation rules.
+ * @author Joel Håkansson
+ */
 public class LatexHyphenatorFactory implements HyphenatorFactory {
 	private final LatexHyphenatorCore core;
 

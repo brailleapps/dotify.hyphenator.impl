@@ -11,14 +11,17 @@ import org.daisy.dotify.common.text.TextFileReader.LineData;
 
 /**
  * Class to decompound words. 
- * @author joha
- *
+ * @author Joel Håkansson
  */
 public class CWDecompounder {
 	static final String SOFT_HYPHEN = "\u00ad";
 	private final HashMap<String, CWHyphenationUnit> stems;
 	private final int decompoundLimit;
 
+	/**
+	 * Creates a new decompounder.
+	 * @param decompoundLimit the partition limit, 1 or more
+	 */
 	public CWDecompounder(int decompoundLimit) {
 		this.decompoundLimit = decompoundLimit;
 		if (decompoundLimit<1) {
