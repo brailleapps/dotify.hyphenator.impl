@@ -61,6 +61,7 @@ task updateBndVersion() << {
 bundle {
     instructions << [
         "-include": file('bnd.bnd'),
+        'Automatic-Module-Name': "$moduleName",
         'Built-By': System.getProperty("user.name"),
         'Built-On': new Date().format('yyyy-MM-dd'),
         'Repository-Revision': "$repoRevision",

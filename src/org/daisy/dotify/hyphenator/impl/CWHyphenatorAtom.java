@@ -1,4 +1,4 @@
-package org.daisy.dotify.impl.hyphenator.latex;
+package org.daisy.dotify.hyphenator.impl;
 
 import java.io.IOException;
 import java.net.URL;
