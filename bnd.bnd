@@ -4,8 +4,7 @@ Private-Package:  \
 	org.daisy.dotify.hyphenator.impl,\
 	org.daisy.dotify.hyphenator
 Service-Component: *
-Include-Resource: / = src/
--sources: false
+-sources: true
 -buildpath: osgi.core,\
 	osgi.cmpn,\
 	biz.aQute.bnd.annotation,\
