@@ -15,11 +15,6 @@ sourceSets {
 	test {	java { srcDir 'test' }	resources { srcDir 'test' } }
 }
 
-configurations {
-	provided
-	compile { extendsFrom provided }
-}
-
 compileJava {
     options.encoding = 'UTF-8'
 }
@@ -43,7 +38,7 @@ repositories {
 }
 
 dependencies {
-    provided group: "biz.aQute.bnd", name: "annotation", version: "2.3.0"
+    compileOnly group: "biz.aQute.bnd", name: "annotation", version: "2.3.0"
     compile "org.daisy.dotify:dotify.api:4.0.0"
     compile "org.daisy.dotify:dotify.common:4.0.0"
     compile group: "com.googlecode.texhyphj", name: "texhyphj", version: "1.2"
