@@ -4,8 +4,7 @@ import java.util.Collection;
 
 import org.daisy.dotify.api.hyphenator.HyphenatorFactory;
 import org.daisy.dotify.api.hyphenator.HyphenatorFactoryService;
-
-import aQute.bnd.annotation.component.Component;
+import org.osgi.service.component.annotations.Component;
 
 /**
  * Provides a hyphenator factory service for latex hyphenation rules.
