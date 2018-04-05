@@ -2,7 +2,18 @@
 [![Type](https://img.shields.io/badge/type-provider_bundle-blue.svg)](https://github.com/brailleapps/wiki/wiki/Types)
 
 # dotify.hyphenator.impl #
-Provides hyphenators for many languages.  
+Provides hyphenators for many languages. This implementation is based on Franklin Mark Liang's hyphenation algorithm as used in TeX and contains patterns for about 50 languages.
+
+## Techniques ##
+  * Java, Java SPI, OSGi
+  * Franklin Mark Liang's hyphenation patterns
+
+## Functionality and features ##
+  * Supports hyphenation for about 50 languages
+  * Widely used format for hyphenation description
+
+## Limitations ##
+Franklin Mark Liang's hyphenation algorithm does not support non-standard hyphenation.
 
 ## Using ##
 Download the [latest release](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22org.daisy.dotify%22%20%20a%3A%22dotify.hyphenator.impl%22) from maven central and add it to your runtime environment.
