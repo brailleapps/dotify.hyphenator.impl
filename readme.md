@@ -1,5 +1,6 @@
 [![Build Status](https://travis-ci.org/brailleapps/dotify.hyphenator.impl.svg?branch=master)](https://travis-ci.org/brailleapps/dotify.hyphenator.impl)
 [![Type](https://img.shields.io/badge/type-provider_bundle-blue.svg)](https://github.com/brailleapps/wiki/wiki/Types)
+[![License: LGPL v2.1](https://img.shields.io/badge/License-LGPL%20v2%2E1%20%28or%20later%29-blue.svg)](https://www.gnu.org/licenses/lgpl-2.1)
 
 # dotify.hyphenator.impl #
 Provides hyphenators for many languages. This implementation is based on Franklin Mark Liang's hyphenation algorithm as used in TeX and contains patterns for about 50 languages.
