@@ -4,7 +4,7 @@ buildscript {
 		mavenCentral()
 	}
 	dependencies {
-		classpath 'biz.aQute.bnd:biz.aQute.bnd.gradle:3.3.0'
+		classpath 'biz.aQute.bnd:biz.aQute.bnd.gradle:4.1.0'
 	}
 }
 
@@ -64,7 +64,6 @@ jar {
 			// See https://github.com/bndtools/bnd/issues/2677
 			// The split-package instruction is there because resource files are included separately on the classpath
 			//'Private-Package': 'org.daisy.dotify.hyphenator.*;-split-package:=merge-first',
-			'Service-Component': '*',
 			'Automatic-Module-Name': "$moduleName",
 			'Bundle-Name': "$bundleName",
 			'Bundle-SymbolicName': "$bundleName",
